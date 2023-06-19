@@ -118,6 +118,7 @@ times_delayed_block_size <- lapply(67108864L * 2L^(0:5), function(i) {
         cl_stop(id)
     })
 })
+times_delayed_block_size
 ```
 
 ## CPU
@@ -126,7 +127,7 @@ times_delayed_block_size <- lapply(67108864L * 2L^(0:5), function(i) {
 library(scran)
 setAutoBlockSize(.Machine$integer.max)
 
-times_delayed_cpu <- lapply(1:5 * 2L, function(i) {
+times_delayed_cpu <- lapply(1:4 * 2L, function(i) {
     message(i)
     bpp <- MulticoreParam(i)
     system.time({
@@ -137,6 +138,7 @@ times_delayed_cpu <- lapply(1:5 * 2L, function(i) {
         cl_stop(id)
     })
 })
+times_delayed_cpu
 ```
 
 ## `R` session information

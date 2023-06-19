@@ -1,0 +1,63 @@
+---
+title: "Performance Summary"
+output:
+  html_document: default
+vignette: >
+  %\VignetteIndexEntry{Performance Summary}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8} 
+---
+
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE)
+```
+
+
+
+## Time and resources spent in the workflow
+
+240 GB memory and 3 cpus were used. 
+
+```{r, echo = TRUE, message=FALSE, eval=TRUE}
+read.csv("CPU_mean.csv")
+```
+
+```{r, echo = TRUE, message=FALSE, eval=TRUE}
+read.csv("MEM_mean.csv")
+```
+
+```{r, echo = TRUE, message=FALSE, eval=TRUE}
+read.csv("time.csv")
+```
+
+## DelayedArray & `modelGeneVarByPoisson()`
+
+
+
+```{r, echo = TRUE, message=FALSE, eval=TRUE}
+
+```
+
+
+
+```{r, echo = TRUE, message=FALSE, eval=TRUE}
+
+```
+
+```{r, echo = TRUE, message=FALSE, eval=TRUE}
+
+```
+
+```{r, echo = TRUE, message=FALSE, eval=TRUE}
+
+```
+
+
+## `R` session information
+
+```{r session_info, echo=FALSE}
+## Session info
+library("sessioninfo")
+options(width = 120)
+session_info()
+```
